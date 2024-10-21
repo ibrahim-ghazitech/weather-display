@@ -15,6 +15,7 @@
     --med-font: 4em;
     --lg-font: 5em;
     --xl-font: 6em;
+    --text-font: 2em;
 }
 
 html,
@@ -32,6 +33,9 @@ body li {
 }
 
 /* font Sizes for headings */
+.text-font{
+    font-size: var(--text-font);
+}
 .sm-font{
     font-size: var(--sm-font);
 }
@@ -51,6 +55,7 @@ body li {
     color: var(--text-clr);
 }
 .row.bg-change {
+    border-radius: 10px;
     background: rgba(0, 0, 0, 0.418);
     background-image: url('../images/bg-images/bg-1.jpg');
     width: 100%;
@@ -58,7 +63,6 @@ body li {
     background-position: bottom;
     background-size: cover;
     background-blend-mode: color;
-    margin-top: 50px;
 }
 section#main {
     width: 100%;
@@ -123,3 +127,14 @@ ul#ul-list li a {
 .active{
     color: #fff !important;
 }
+img#weather-update {
+    max-width: 100%;
+    width: 80px;
+}
+p#hours {
+    margin-bottom: 0;
+}
+p#updated-temp {
+    margin-top: 12px;
+}
+
