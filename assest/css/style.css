@@ -127,7 +127,7 @@ ul#ul-list li a {
 .active{
     color: #fff !important;
 }
-img#weather-update {
+#forecast-div img{
     max-width: 100%;
     width: 80px;
 }
