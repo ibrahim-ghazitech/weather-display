@@ -1,7 +1,7 @@
+
 let list = document.querySelectorAll('#ul-list li a');
 let allList = document.querySelectorAll('#ul-list li a');
 let forcastDiv = document.querySelector('#forecast-div');
-
 
 list.forEach(anchor => {
  anchor.addEventListener('click',function(){
@@ -10,12 +10,10 @@ list.forEach(anchor => {
  });
 });
 
-
-
 // Array and Store Data
 
 const weatherData = {
-   city: 'Karachi',
+   city: 'Islamabad',
    date: 'October 21, 2024',
    temperature: 82,
    highTemp: 84,
@@ -31,10 +29,16 @@ const weatherData = {
    ]
 };
 
+const today = new Date();
+const year = today.getFullYear();
+const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const month = monthName[today.getMonth()];
+const day = String(today.getDate()).padStart(2, '0');
+const formattedDate = `${day}-${month}-${year}`;
 
 function displayWeather() {
    document.getElementById('country-name').textContent = weatherData.city;
-   document.getElementById('day-date').textContent = weatherData.date;
+   document.getElementById('day-date').textContent = formattedDate;
    document.getElementById('weather-condition').textContent = weatherData.condition;
 
    document.getElementById('temperature').innerHTML = `${weatherData.temperature}<sup>°</sup>`;
@@ -58,8 +62,9 @@ function displayWeather() {
    });
 }
 
-
 displayWeather();
+
+
 
 
 

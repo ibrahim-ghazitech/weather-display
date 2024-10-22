@@ -11,6 +11,7 @@
 :root {
     --border-rad: 10px;
     --text-clr: #fff;
+    --btn-clr: #1b2761;
     --sm-font: 3em;
     --med-font: 4em;
     --lg-font: 5em;
@@ -64,7 +65,22 @@ body li {
     background-size: cover;
     background-blend-mode: color;
     box-shadow: 1px 1px 40px black;
+    position: relative;
 }
+
+/* .row.bg-change::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: black;
+    filter: blur(10px);
+} */
+
 
 section#main {
     display: flex;
@@ -78,7 +94,7 @@ section#main {
 
 .wrapper {
     width: 100%;
-    max-width: 1200px; 
+ 
 }
 
 img#cloud-image {
@@ -139,7 +155,7 @@ ul#ul-list li a {
     color: var(--text-clr);
 }
 .active{
-    color: #fff !important;
+    color: var(--text-clr) !important;
 }
 #forecast-div img{
     max-width: 100%;
@@ -150,5 +166,28 @@ p#hours {
 }
 p#updated-temp {
     margin-top: 12px;
+}
+input#Search-city {
+    width: 95%;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 20px;
+    font-size: 1.25em;
+}
+
+button#search-btn {
+    width: 150px;
+    height: 50px;
+    margin: 50px 0px;
+    font-size: 1.25em;
+    border: none;
+    border-radius: 10px;
+    background:var(--btn-clr);
+    color:var(--text-clr);
 }
 
