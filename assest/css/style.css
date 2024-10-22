@@ -84,6 +84,7 @@ section#main {
 img#cloud-image {
     max-width: 100%;
     width: 90px;
+    filter: invert(1);
 }
 div#left-column {
     padding-left: 50px;

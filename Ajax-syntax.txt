@@ -1,0 +1,9 @@
+fetch('your-url-here')
+    .then(response => response.json())  // Convert the response to JSON
+    .then(data => {
+        console.log(data);  // Handle the data here
+    })
+    .catch(error => {
+        console.error('Error:', error);  // Handle the error here
+    });
+
